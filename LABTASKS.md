@@ -27,7 +27,9 @@ Run it according to the instructions in the
 [README](./README.md), including running the JUnit tests. Answer
 the following questions.
 
-> Protip: Using Google to gain additional knowledge or support your conjectures about how something works is great! It's important that you think about everything and come to an understanding, though, so don't use Google as a scapegoat to get the questions done quickly or you will regret it!
+> Protip: Using Google to gain additional knowledge or support your conjectures about how something works is great!
+It's important that you think about everything and come to an understanding, though, so don't use Google as a scapegoat
+to get the questions done quickly or you will regret it!
 
 :question: Answer questions *4* and *5* [QUESTIONS](./LABTASKS.md#questions)
 
@@ -78,7 +80,7 @@ following URLs:
 
 :question: *6* What are the contents of the `public` folder? What is the purpose of each of the HTML files there?
 
-:question: *7* Describe what happens when you filter users by
+:questi27on: *7* Describe what happens when you filter users by
 age in the client? What is read from the web page, and what
 request is sent to the server? What is received, and how/where
 is it displayed?

@@ -95,6 +95,7 @@ You'll also want the JSONView extension for either Firefox or Chrome installed. 
 We use the [Gradle][gradle] build tool to build and run our web application.
 Gradle is a powerful system for defining, managing, and running tasks
 that allows us to easily build and test our full web application.
+(The friendly panda change)
 
 Open the Gradle tool window in IntelliJ by going to: `View -> Tool Windows -> Gradle`. From here, open up the `Tasks` section. Gradle tasks run things like the development server, production build, and tests. Open up the `application` task category and double click `run`.
 

@@ -80,7 +80,7 @@ following URLs:
 
 :question: *6* What are the contents of the `public` folder? What is the purpose of each of the HTML files there?
 
-:questi27on: *7* Describe what happens when you filter users by
+:question: *7* Describe what happens when you filter users by
 age in the client? What is read from the web page, and what
 request is sent to the server? What is received, and how/where
 is it displayed?

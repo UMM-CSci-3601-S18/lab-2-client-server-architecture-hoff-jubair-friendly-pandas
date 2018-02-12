@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertEquals;
 public class GetTodoByIDFromDB {
 
   @Test
-  public void getStokesClayton() throws IOException {
+  public void getBlanche() throws IOException {
     ToDoDatabase db = new ToDoDatabase("src/main/data/todos.json");
     ToDo todo = db.getToDo("58895985a22c04e761776d54");
     assertEquals("Incorrect name", "Blanche", todo.owner);

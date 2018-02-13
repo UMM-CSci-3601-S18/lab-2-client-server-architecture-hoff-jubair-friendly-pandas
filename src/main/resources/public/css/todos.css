@@ -1,0 +1,18 @@
+body {
+  font-size: 1.5rem;
+  line-height: 1.618;
+
+  color: #4a4a4a;
+  background-color: #b8f9e5;
+
+
+  border-radius: 10px;
+  padding: 20px;
+  border: 5px solid;
+  margin: 25px;
+  max-width: 870px;
+  margin-left: auto; /* this makes the width work*/
+  margin-right: auto; /* this makes the width work*/
+  width: 75%; /* Makes the title fill 75% of the width of the screen */
+  background-image: url(https://2.bp.blogspot.com/-BsL9gRE80Ug/U0OgeWbbxtI/AAAAAAAAF-w/teXrzw-TBcU/s1600/nacre-background-tile.jpg);
+}

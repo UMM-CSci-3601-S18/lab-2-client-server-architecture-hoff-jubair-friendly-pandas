@@ -3,7 +3,7 @@
 // for the second definition?
 
 /**
- * Function to get all the users!
+ * Function to get all the todos!
  */
 function getAllToDos() {
   console.log("Getting all the todos.");

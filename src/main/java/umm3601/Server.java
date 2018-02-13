@@ -22,7 +22,7 @@ public class Server {
 
   public static void main(String[] args) {
 
-    // Initialize dependencies
+    // Initialize dependencie
     UserController userController = buildUserController();
     ToDoController todoController = buildToDoController();
 
@@ -95,6 +95,7 @@ public class Server {
     return userController;
   }
 
+  // Here we make the ToDoController, similar to the user controller above.
   private static ToDoController buildToDoController() {
     ToDoController todoController = null;
 

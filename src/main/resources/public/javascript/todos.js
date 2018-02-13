@@ -3,7 +3,7 @@
 // for the second definition?
 
 /**
- * Function to get all the todos!
+ * Function to get all the todos
  */
 function getAllToDos() {
   console.log("Getting all the todos.");
@@ -14,6 +14,7 @@ function getAllToDos() {
   });
 }
 
+// Get todos by owner name.
 function getAllToDosByOwner() {
   console.log("Getting all the todos.");
 
@@ -23,6 +24,7 @@ function getAllToDosByOwner() {
   });
 }
 
+// Get todos by category.
 function getAllTodosByCategory() {
   console.log("Getting all the todos.");
 

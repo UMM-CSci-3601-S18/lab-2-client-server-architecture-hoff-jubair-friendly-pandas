@@ -7,11 +7,10 @@ import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Tests umm3601.user.Database listUser functionality
- */
+
 public class GetFirstToDo {
 
+  // Test to see that the first object in the JSON file is found correctly.
   @Test
   public void firstToDoInList() throws IOException {
     ToDoDatabase db = new ToDoDatabase("src/main/data/todos.json");

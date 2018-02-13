@@ -8,12 +8,10 @@ import java.util.Map;
 
 import static junit.framework.TestCase.assertEquals;
 
-/**
- * Tests umm3601.user.Database filterUsersByAge
- * and listUsers with _age_ query parameters
- */
 public class GetToDoByOwner {
 
+  // We want to see that there is the correct number of todos by owner, in here we are testing
+  // that Fry has 61 todos and Blanche has 43 todos.
   @Test
   public void filterToDosByOwner() throws IOException {
     ToDoDatabase db = new ToDoDatabase("src/main/data/todos.json");

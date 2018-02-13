@@ -7,11 +7,9 @@ import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Tests umm3601.todo.Database listUser functionality
- */
 public class TotalNumberOfToDos {
 
+  // There are 300 total todos, so we want to test that that number is correct.
   @Test
   public void totalToDoCount() throws IOException {
     ToDoDatabase db = new ToDoDatabase("src/main/data/todos.json");

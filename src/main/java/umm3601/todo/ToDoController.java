@@ -9,7 +9,7 @@ import static umm3601.Util.buildFailJsonResponse;
 import static umm3601.Util.buildSuccessJsonResponse;
 
 /**
- * Controller that manages requests for info about users.
+ * Controller that manages requests for info about todos.
  */
 public class ToDoController {
 
@@ -17,13 +17,13 @@ public class ToDoController {
   private ToDoDatabase database;
 
   /**
-   * Construct a controller for users.
+   * Construct a controller for todos.
    *
    * This loads the "database" of user info from a JSON file and
-   * stores that internally so that (subsets of) users can be returned
+   * stores that internally so that (subsets of) todos can be returned
    * in response to requests.
    *
-   * @param database the database containing user data
+   * @param database the database containing todo data
    */
   public ToDoController(ToDoDatabase database) {
     gson = new Gson();
@@ -36,7 +36,7 @@ public class ToDoController {
    * @param req the HTTP request
    * @param res the HTTP response
    * @return a success JSON object if the user with that ID is found, a fail
-   * JSON object if no user with that ID is found
+   * JSON object if no todo with that ID is found
    */
   public JsonObject getToDo(Request req, Response res) {
     res.type("application/json");
@@ -51,11 +51,11 @@ public class ToDoController {
   }
 
   /**
-   * Get a JSON response with a list of all the users in the "database".
+   * Get a JSON response with a list of all the todos in the "database".
    *
    * @param req the HTTP request
    * @param res the HTTP response
-   * @return a success JSON object containing all the users
+   * @return a success JSON object containing all the todos
    */
   public JsonObject getToDos(Request req, Response res) {
     res.type("application/json");

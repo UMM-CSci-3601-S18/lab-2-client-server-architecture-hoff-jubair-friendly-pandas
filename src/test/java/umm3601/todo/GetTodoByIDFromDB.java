@@ -6,11 +6,9 @@ import java.io.IOException;
 
 import static junit.framework.TestCase.assertEquals;
 
-/**
- * Tests umm3601.user.Database getUser functionality
- */
 public class GetTodoByIDFromDB {
 
+  // Test to see if the owner Blanche matches the id.
   @Test
   public void getBlanche() throws IOException {
     ToDoDatabase db = new ToDoDatabase("src/main/data/todos.json");

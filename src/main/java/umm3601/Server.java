@@ -24,6 +24,7 @@ public class Server {
 
     // Initialize dependencies
     UserController userController = buildUserController();
+    ToDoController todoController = buildToDoController();
 
     // Configure Spark
     port(4567);
@@ -48,9 +49,9 @@ public class Server {
     get("api/users", userController::getUsers);
 
     // Get specific todo
-    //get("api/todos", userController::getToDo);
+    get("api/todos/:id", todoController::getToDo);
     // List todos, filtered using query parameters
-    //get("api/users", userController::getUsers);
+    get("api/todos", todoController::getToDos);
 
     // An example of throwing an unhandled exception so you can see how the
     // Java Spark debugger displays errors like this.
@@ -93,6 +94,27 @@ public class Server {
 
     return userController;
   }
+
+  private static ToDoController buildToDoController() {
+    ToDoController todoController = null;
+
+    try {
+      todoDatabase = new ToDoDatabase(TODO_DATA_FILE);
+      todoController = new ToDoController(todoDatabase);
+    } catch (IOException e) {
+      System.err.println("The server failed to load the user data; shutting down.");
+      e.printStackTrace(System.err);
+
+      //Shut down server
+      stop();
+      System.exit(1);
+    }
+
+    return todoController;
+  }
+
+
+
 
   // Enable GZIP for all responses
   private static Filter addGzipHeader = (Request request, Response response) -> {

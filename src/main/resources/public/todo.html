@@ -13,8 +13,13 @@
 
 <div id="jsonDump" style="margin-top:20px"> Json will go here </div>
 
-age: <input id="age" type= "text" name="age">
-<button type="button" id="getUsersByAge"> get users by age </button>
+owner: <input id="owner" type= "text" name="owner">
+<button type="button" id="getToDosByOwner"> get todos by owner </button>
+
+</br>
+
+category: <input id="category" type= "text" name="category">
+<button type="button" id="getToDosByCategory"> get todos by category </button>
 
 <script>
   window.onload = function() {
@@ -23,8 +28,11 @@ age: <input id="age" type= "text" name="age">
     var element = document.getElementById('getAll');
     element.addEventListener("click", getAllToDos, true);
 
-    element = document.getElementById('getUsersByAge');
-    element.addEventListener("click", getAllUsersByAge, true);
+    element = document.getElementById('getToDosByOwner');
+    element.addEventListener("click", getAllToDosByOwner, true);
+
+    element = document.getElementById('getToDosByCategory');
+    element.addEventListener("click", getAllTodosByCategory, true);
   }
 </script>
 </body>

@@ -46,26 +46,51 @@ public class ToDoDatabase {
   public ToDo[] listToDos(Map<String, String[]> queryParams) {
     ToDo[] filteredToDos = allToDos;
 
-   // Filter age if defined
+   // Filter status if defined
+
     if(queryParams.containsKey("status")) {
-      boolean targetStatus = Boolean.parseBoolean(queryParams.get("status")[0]);
+      String targetStatus = queryParams.get("status")[0];
       filteredToDos = filterToDosByStatus(filteredToDos, targetStatus);
+      return filteredToDos;
+    }
+    if(queryParams.containsKey("limit")) {
+      int targetLimit = Integer.parseInt(queryParams.get("limit")[0]);
+      filteredToDos = listByLimit(filteredToDos, targetLimit);
+      return filteredToDos;
+
     }
     // Process other query parameters here...
+    return null;
 
-    return filteredToDos;
   }
 
   /**
-   * Get an array of all the users having the target age.
+   * Get an array of all the users having the target status.
    *
-   * @param todos the list of users to filter by age
-   * @param targetStatus the target age to look for
+   * @param todos the list of users to filter by status
+   * @param targetStatus the target status to look for
    * @return an array of all the users from the given list that have
-   * the target age
+   * the target status
    */
-  public ToDo[] filterToDosByStatus(ToDo[] todos, boolean targetStatus) {
-    return Arrays.stream(todos).filter(x -> x.status == targetStatus).toArray(ToDo[]::new);
+  public ToDo[] filterToDosByStatus(ToDo[] todos, String targetStatus) {
+
+    if (targetStatus.equals("complete")) {
+
+      return Arrays.stream(todos).filter(x -> x.status == true).toArray(ToDo[]::new);
+
+    }
+
+    if (targetStatus.equals("incomplete")) {
+
+      return Arrays.stream(todos).filter(x -> x.status == false).toArray(ToDo[]::new);
+
+    }
+
+    return todos;
+  }
+
+  public ToDo[] listByLimit(ToDo[] todos, int targetLimit) {
+    return Arrays.stream(todos).limit(targetLimit).toArray(ToDo[]::new);
   }
 
 }

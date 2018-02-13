@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>ToDos</title>
-  <link rel="stylesheet" type="text/css" href="css/users.css">
+  <link rel="stylesheet" type="text/css" href="css/todos.css">
   <script type="text/javascript" src="javascript/todos.js"> </script>
 </head>
 <body>
+
+<a href="/index.html">Home</a>
+<a href="/about">About</a>
+<a href="/users">Users</a>
+<a href="/todo">ToDos</a>
+
+</br>
+
 <button type="button" id="getAll">Get All ToDos</button>
 
 <hr/>
 
-<div id="jsonDump" style="margin-top:20px"> Json will go here </div>
+<div id="jsonDump" style="margin-top:20px"> Json will go here if you click Get All ToDos. </div>
+
+</br>
+</br>
+</br>
 
 owner: <input id="owner" type= "text" name="owner">
 <button type="button" id="getToDosByOwner"> get todos by owner </button>
@@ -21,7 +33,30 @@ owner: <input id="owner" type= "text" name="owner">
 category: <input id="category" type= "text" name="category">
 <button type="button" id="getToDosByCategory"> get todos by category </button>
 
+</br>
+
+status (complete or incomplete): <input id="status" type= "text" name="category">
+<button type="button" id="getToDosByStatus"> get todos by status </button>
+
+</br>
+</br>
+</br>
+
+The following buttons will take you directly to certain JSON data:
+</br>
+<button onclick="location.href='/api/todos?status=complete'" type="button">
+  Complete Todos</button>
+<button onclick="location.href='/api/todos?status=incomplete'" type="button">
+  Incomplete Todos</button>
+<button onclick="location.href='/api/todos?owner=Fry'" type="button">
+  Fry's Todos</button>
+<button onclick="location.href='/api/todos?limit=12'" type="button">
+  The first 12 Todos</button>
+
+</br>
+
 <script>
+
   window.onload = function() {
     console.log("The page is loaded now!");
 
@@ -33,6 +68,9 @@ category: <input id="category" type= "text" name="category">
 
     element = document.getElementById('getToDosByCategory');
     element.addEventListener("click", getAllTodosByCategory, true);
+
+    element = document.getElementById('getToDosByStatus');
+    element.addEventListener("click", getAllToDosByStatus, true);
   }
 </script>
 </body>
